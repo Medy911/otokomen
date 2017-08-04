@@ -1,3 +1,4 @@
+#python 3
 import requests, json, time, random
 def gettoken(): #an trom cua Khoa hjhj
     id=input("id: ")
@@ -14,7 +15,7 @@ def gettoken(): #an trom cua Khoa hjhj
 
 ques=input("Do you have token? (Y/ N)")
 
-if ques=="Y":
+if ques.upper()=="Y":
     token=input("token: ")
 else:
     token=gettoken()

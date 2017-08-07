@@ -40,9 +40,9 @@ def auto(t, key ):
             t=requests.get(t["paging"]["next"]).json()
         except KeyError:
             break
-        except KeyboardInterrupt:
-            break
-    choices()
+        #except KeyboardInterrupt:
+            #break
+    #choices()
             
 
 ques=input("Do you have token? (Y/ N)")

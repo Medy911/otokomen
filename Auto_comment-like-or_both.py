@@ -40,11 +40,18 @@ def auto(t, key ):
             t=requests.get(t["paging"]["next"]).json()
         except KeyError:
             break
-        #except KeyboardInterrupt:
-            #break
-    #choices()
-            
+        except KeyboardInterrupt:
+            while True:
+                ques2=input("Do you want to quit (q) or want to change the spamming method (c)?")
+                if ques2=='q':
+                       break
+                if ques2=='c':
+                       choices()
+                else:
+                       print('invalid response')
+                       ques2
 
+                       
 ques=input("Do you have token? (Y/ N)")
 
 if ques.upper()=="Y":
@@ -52,8 +59,9 @@ if ques.upper()=="Y":
 else:
     token=gettoken()
     print(token) 
-
-idfb=input('Facebook ID you want to spam: ')
+def idfb():
+    global idfb
+    idfb=input('Facebook ID you want to spam: ')
 
 def choices():
     global ques1, key, t
@@ -71,8 +79,8 @@ def choices():
     if ques1=='b':
         key= ['comments', 'reactions']
         auto(t, key )
-        
 if __name__ == "__main__":
+    idfb()
     choices()
     
 

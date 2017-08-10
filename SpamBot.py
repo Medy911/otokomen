@@ -37,7 +37,7 @@ def auto(t, key ):
                     print (payload1['message'] +' | '+item['id'] )
                 if key==['comments', 'reactions']:
                     print (payload1['message'] +' | '+payload1['type'] +' | '+item['id'])
-                time.sleep(2)
+                    time.sleep(2)
             t=requests.get(t["paging"]["next"]).json()
         except KeyError:
             break

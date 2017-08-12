@@ -6,6 +6,7 @@ def spam():
             payload={'method':'post', 'message':random.choice(open("Compliment list.txt").read().splitlines()), 'access_token':token }		
             comment=requests.post('https://graph.facebook.com/v2.10/'+post_id+'/comments', params=payload).json()
             print(payload['message'])
+            time.sleep(2)
         except KeyboardInterrupt:
             while True:
                 ques=input("Do you want to quit (q) or continue (c)?")

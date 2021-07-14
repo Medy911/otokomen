@@ -24,7 +24,7 @@ def auto(t, key ):
         try:
             for item in t['data']:
                 payload1={
-                    'type':random.choice(['LIKE', 'LOVE', 'WOW', 'HAHA', 'SAD', 'ANGRY']),
+                    'type':random.choice(['LIKE', 'LOVE', 'WOW', 'HAHA', 'SAD']),
                     'message':random.choice(open("Compliment list.txt").read().splitlines()) , 
                     'method': 'POST' ,
                     'access_token':token

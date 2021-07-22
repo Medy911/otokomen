@@ -53,7 +53,7 @@ def auto(t, key ):
                        ques2
 
                        
-ques=input("Do you have token? (Y/ N)")
+ques=input("Do you have token? (Y/N)")
 
 if ques.upper()=="Y":
     token=input("token: ")
